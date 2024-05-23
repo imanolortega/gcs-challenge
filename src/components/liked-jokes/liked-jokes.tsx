@@ -1,10 +1,12 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { Joke } from "@/utils/types";
 
 const fetchLikedJokes = () => {
-  return JSON.parse(localStorage.getItem("likedJokes") || "[]");
+  if (typeof window !== "undefined") {
+    return JSON.parse(localStorage.getItem("likedJokes") || "[]");
+  }
+  return [];
 };
 
 const LikesListContent = () => {
@@ -23,7 +25,9 @@ const LikesListContent = () => {
 
   const handleRemoveJoke = (id: string) => {
     const updatedLikedJokes = likedJokes.filter((joke) => joke.id !== id);
-    localStorage.setItem("likedJokes", JSON.stringify(updatedLikedJokes));
+    if (typeof window !== "undefined") {
+      localStorage.setItem("likedJokes", JSON.stringify(updatedLikedJokes));
+    }
     setLikedJokes(updatedLikedJokes);
   };
 

@@ -3,7 +3,6 @@
 export default function LikeBtn({ joke }: { joke: Joke }) {
   const handleLike = () => {
     const likedJokes = JSON.parse(localStorage.getItem("likedJokes") || "[]");
-    console.log;
     if (!likedJokes.some((likedJoke: Joke) => likedJoke.id === joke.id)) {
       likedJokes.push(joke);
       localStorage.setItem("likedJokes", JSON.stringify(likedJokes));
