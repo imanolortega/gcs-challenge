@@ -95,7 +95,7 @@ function JokeComponent() {
           <div className="gradient-main-content max-w-2xl flex justify-center">
             <p className="text-xl text-center mb-10">{joke.joke}</p>
           </div>
-          <div className="grid grid-cols-4 min-w-xl gap-3">
+          <div className="grid lg:grid-cols-4 min-w-xl gap-3">
             <Btn onClick={handleRefresh} />
             <LikeBtn joke={joke} />
             <LinkBtn id={joke.id} />

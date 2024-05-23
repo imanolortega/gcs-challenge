@@ -10,7 +10,7 @@ export default async function Home() {
       <section className="mb-32 grid text-center">
         <Link href="/joke-list" className="btn-primary">
           <p className="mb-3 text-xl font-semibold">
-            Check your jokes{" "}
+            Favorite jokes{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
