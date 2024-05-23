@@ -11,7 +11,13 @@ export default function LikeBtn({ joke }: { joke: Joke }) {
 
   const handleLike = () => {
     const likedJokes = JSON.parse(localStorage.getItem("likedJokes") || "[]");
-    if (!isLiked) {
+    if (isLiked) {
+      const updatedLikedJokes = likedJokes.filter(
+        (likedJoke: Joke) => likedJoke.id !== joke.id
+      );
+      localStorage.setItem("likedJokes", JSON.stringify(updatedLikedJokes));
+      setIsLiked(false);
+    } else {
       likedJokes.push(joke);
       localStorage.setItem("likedJokes", JSON.stringify(likedJokes));
       setIsLiked(true);
@@ -23,7 +29,7 @@ export default function LikeBtn({ joke }: { joke: Joke }) {
       className={`${isLiked ? "btn-active" : "btn-primary"}`}
       onClick={handleLike}
     >
-      Favorite
+      {isLiked ? "Remove" : "Favorite"}
     </button>
   );
 }
