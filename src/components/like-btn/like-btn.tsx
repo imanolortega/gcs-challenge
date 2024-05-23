@@ -29,7 +29,7 @@ export default function LikeBtn({ joke }: { joke: Joke }) {
       className={`${isLiked ? "btn-active" : "btn-primary"}`}
       onClick={handleLike}
     >
-      {isLiked ? "Remove" : "Favorite"}
+      Favorite
     </button>
   );
 }

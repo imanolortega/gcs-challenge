@@ -1,11 +1,11 @@
 "use client";
-import { useSearchParams, useRouter } from "next/navigation";
+import { Joke } from "@/utils/types";
 import { useEffect, useState, Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import Btn from "../btn/btn";
 import LikeBtn from "../like-btn/like-btn";
 import LinkBtn from "../link-btn/link-btn";
 import ShareBtn from "../share-btn/share-btn";
-import { Joke } from "@/utils/types";
-import Btn from "../btn/btn";
 
 async function getRandomJoke() {
   const res = await fetch("https://icanhazdadjoke.com/", {
