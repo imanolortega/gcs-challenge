@@ -1,28 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import Icon from "../icons/icon";
 
 export default function LinkBtn({ id }: { id: string }) {
-  const [copied, setCopied] = useState(false);
+  const handleCopyToClipboard = async () => {
+    const textToCopy = `${window.location.origin}/?id=${id}`;
 
-  const handleCopyToClipboard = () => {
-    const textField = document.createElement("textarea");
-    textField.innerText = `${window.location.origin}/?id=${id}`;
-    document.body.appendChild(textField);
-    textField.select();
-    document.execCommand("copy");
-    textField.remove();
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
   };
+
   return (
     <Link
-      className="btn-primary"
+      className="btn btn-primary"
       href={`/?id=${id}`}
       onClick={handleCopyToClipboard}
     >
-      Copy Link
+      <Icon type="copy" />
     </Link>
   );
 }

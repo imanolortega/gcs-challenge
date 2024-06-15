@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
 import { Joke } from "@/utils/types";
+import { useState, useEffect } from "react";
+import Icon from "../icons/icon";
+import Btn from "../btn/btn";
 
 export default function LikeBtn({ joke }: { joke: Joke }) {
   const [isLiked, setIsLiked] = useState<boolean>(false);
@@ -25,11 +27,10 @@ export default function LikeBtn({ joke }: { joke: Joke }) {
   };
 
   return (
-    <button
+    <Btn
       className={`${isLiked ? "btn-active" : "btn-primary"}`}
       onClick={handleLike}
-    >
-      Favorite
-    </button>
+      iconType="favorite"
+    />
   );
 }

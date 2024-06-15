@@ -1,3 +1,5 @@
+import Btn from "../btn/btn";
+
 export default function ShareBtn({ url }: { url: string }) {
   const shareOnX = () => {
     const tweetText = `Check this funny joke ${encodeURIComponent(url)}`;
@@ -5,9 +7,5 @@ export default function ShareBtn({ url }: { url: string }) {
     window.open(twitterShareUrl, "_blank");
   };
 
-  return (
-    <button className="btn-primary" onClick={shareOnX}>
-      Share on X
-    </button>
-  );
+  return <Btn className="btn-primary" onClick={shareOnX} iconType="share" iconSize={24} />;
 }

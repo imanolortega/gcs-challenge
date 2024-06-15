@@ -18,6 +18,10 @@
   .btn-active {
     @apply rounded-lg border border-transparent px-4 py-3 transition-colors border-gray-300 bg-gray-100 dark:border-sky-900/25 dark:bg-sky-800/20 text-center;
   }
+
+  .btn {
+   @apply w-14 h-14 flex justify-center content-center
+  }
 }
 
 :root {
