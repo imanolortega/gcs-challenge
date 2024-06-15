@@ -20,7 +20,7 @@
   }
 
   .btn {
-   @apply w-14 h-14 flex justify-center content-center
+   @apply w-14 h-14 px-2 py-1 flex justify-center content-center flex-wrap
   }
 }
 

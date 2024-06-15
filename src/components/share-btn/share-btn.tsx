@@ -7,5 +7,5 @@ export default function ShareBtn({ url }: { url: string }) {
     window.open(twitterShareUrl, "_blank");
   };
 
-  return <Btn className="btn-primary" onClick={shareOnX} iconType="share" iconSize={24} />;
+  return <Btn className="btn-primary" onClick={shareOnX} iconType="share" iconSize={22} />;
 }

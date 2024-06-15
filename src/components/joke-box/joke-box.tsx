@@ -101,6 +101,7 @@ function JokeComponent() {
               className="btn-primary"
               onClick={handleRefresh}
               iconType="refresh"
+              iconSize={26}
             />
             <LikeBtn joke={joke} />
             <LinkBtn id={joke.id} />
