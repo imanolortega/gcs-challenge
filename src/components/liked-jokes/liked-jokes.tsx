@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Joke } from "@/utils/types";
+import Icon from "../icons/icon";
 
 const fetchLikedJokes = () => {
   if (typeof window !== "undefined") {
@@ -52,14 +53,18 @@ const LikesListContent = () => {
       ) : filteredJokes.length > 0 ? (
         <ul className="">
           {filteredJokes.map((joke: Joke) => (
-            <li className="mb-6" key={joke.id}>
-              <span>- {joke.joke}</span>
-              <button
-                className="ml-4 btn-secondary"
-                onClick={() => handleRemoveJoke(joke.id)}
-              >
-                Remove
-              </button>
+            <li className="mb-6 grid grid-cols-[90%_10%] p-2" key={joke.id}>
+              <div className="flex content-center pt-1">
+                <p>{joke.joke}</p>
+              </div>
+              <div>
+                <button
+                  className="ml-4 btn-secondary flex content-center justify-center"
+                  onClick={() => handleRemoveJoke(joke.id)}
+                >
+                  <Icon type="remove" size={18} />
+                </button>
+              </div>
             </li>
           ))}
         </ul>
