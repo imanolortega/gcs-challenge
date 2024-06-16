@@ -96,17 +96,17 @@ function JokeComponent() {
             <p className="text-xl text-center mb-10">{joke.joke}</p>
           </div>
           <div className="flex content-center justify-center">
-          <div className="grid lg:grid-cols-4 max-w-xs gap-3">
-            <Btn
-              className="btn-primary"
-              onClick={handleRefresh}
-              iconType="refresh"
-              iconSize={26}
-            />
-            <LikeBtn joke={joke} />
-            <LinkBtn id={joke.id} />
-            <ShareBtn url={shareOnXURL} />
-          </div>
+            <div className="grid grid-cols-4 lg:grid-cols-4 max-w-xs gap-3">
+              <Btn
+                className="btn-primary"
+                onClick={handleRefresh}
+                iconType="refresh"
+                iconSize={26}
+              />
+              <LikeBtn joke={joke} />
+              <LinkBtn id={joke.id} />
+              <ShareBtn url={shareOnXURL} />
+            </div>
           </div>
         </>
       )}

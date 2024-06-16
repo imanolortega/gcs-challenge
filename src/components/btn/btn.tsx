@@ -4,16 +4,16 @@ export default function Btn({
   className,
   onClick,
   iconType,
-  iconSize = 32
+  iconSize = 32,
 }: {
   className: string;
   onClick: () => void;
   iconType: string;
-  iconSize?: number
+  iconSize?: number;
 }) {
   return (
     <button className={`btn ${className}`} onClick={onClick}>
       <Icon type={iconType} size={iconSize} />
-   </button>
+    </button>
   );
 }

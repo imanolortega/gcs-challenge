@@ -1,4 +1,10 @@
-export default function Icon({ type, size = 24 }: { type: string, size?: number }) {
+export default function Icon({
+  type,
+  size = 24,
+}: {
+  type: string;
+  size?: number;
+}) {
   const w3Url = "http://www.w3.org/2000/svg";
   const iconColor = "#e5e7eb";
 
@@ -26,7 +32,12 @@ export default function Icon({ type, size = 24 }: { type: string, size?: number 
 
   const Copy = () => {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width={size} height={size}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+        width={size}
+        height={size}
+      >
         <path
           fill={iconColor}
           d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z"
@@ -37,7 +48,12 @@ export default function Icon({ type, size = 24 }: { type: string, size?: number 
 
   const Share = () => {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width={size} height={size}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        width={size}
+        height={size}
+      >
         <path
           fill={iconColor}
           d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
