@@ -4,7 +4,7 @@ import JokeBox from "@/components/joke-box/joke-box";
 export default async function Home() {
   return (
     <>
-      <section className="flex flex-col gap-10">
+      <section className="flex flex-col gap-10 mb-6 lg:mb-0">
         <JokeBox />
       </section>
       <section className="mb-32 grid text-center">

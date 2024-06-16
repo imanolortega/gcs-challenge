@@ -30,7 +30,7 @@ export default function LikeBtn({ joke }: { joke: Joke }) {
     <Btn
       className={`${isLiked ? "btn-active" : "btn-primary"}`}
       onClick={handleLike}
-      iconType="favorite"
+      iconType={`${isLiked ? "favorite-fill" : "favorite"}`}
       iconSize={30}
     />
   );
