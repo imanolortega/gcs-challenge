@@ -12,10 +12,10 @@ export default async function Page() {
       <section className="mb-32 grid text-center">
         <Link href="/" className="btn-primary">
           <p className="text-xl font-semibold">
-            Return to home{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            <span className="rotate-180 mr-2 inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
+            Return to home{" "}
           </p>
         </Link>
       </section>
