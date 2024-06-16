@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +24,9 @@ export default function RootLayout({
       />
 
       <body className={inter.className}>
-        <main className="flex min-h-screen flex-col items-center justify-between p-16">
-          <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-            <div className="flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-sky-900/25 dark:bg-sky-900/25 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-sky-900/25">
+        <main className="flex min-h-screen flex-col items-center justify-between p-8 lg:p-16">
+          <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm flex mb-6 lg:mb-0">
+            <Link href="/" className="logo-link">
               <Image
                 src="/smile.svg"
                 alt="Smile Logo"
@@ -34,7 +35,7 @@ export default function RootLayout({
                 priority
               />
               <p className="content-center ml-2">Random Dad Jokes</p>
-            </div>
+            </Link>
           </div>
           {children}
         </main>

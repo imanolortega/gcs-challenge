@@ -22,6 +22,19 @@
   .btn {
    @apply w-14 h-14 px-2 py-1 flex justify-center content-center flex-wrap
   }
+
+  .logo-link {
+    @apply w-full
+    flex justify-center
+    rounded-xl border-gray-300 lg:rounded-xl
+    bg-gradient-to-b from-zinc-200
+    pb-6 pt-8
+    backdrop-blur-2xl
+    dark:border-sky-900/25 dark:bg-sky-900/25 dark:from-inherit
+    lg:static
+    lg:w-auto
+    lg:bg-gray-200 lg:p-4 lg:dark:bg-sky-900/25
+  }
 }
 
 :root {
