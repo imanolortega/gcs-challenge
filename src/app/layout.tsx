@@ -7,28 +7,28 @@ import { frontendURL } from "@/utils/common";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const title = "Random Dad Jokes"
-const description = "The funniest random dad jokes. A vast collection of hilarious dad jokes guaranteed to make you laugh."
+const title = "Random Dad Jokes";
+const description =
+  "The funniest random dad jokes. A vast collection of hilarious dad jokes guaranteed to make you laugh.";
 
 export const metadata: Metadata = {
   title: title,
-  description:
-  description,
-    openGraph: {
-      title: title,
-      description: description,
-      url: frontendURL,
-      siteName: title,
-      images: [
-        {
-          url: `${frontendURL}/random-dad-jokes.jpg`,
-          width: 1200,
-          height: 780,
-        },
-      ],
-      locale: 'en_US',
-      type: 'website',
-    },
+  description: description,
+  openGraph: {
+    title: title,
+    description: description,
+    url: frontendURL,
+    siteName: title,
+    images: [
+      {
+        url: `${frontendURL}/random-dad-jokes.jpg`,
+        width: 1200,
+        height: 780,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
