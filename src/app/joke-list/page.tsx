@@ -1,5 +1,10 @@
 import LikedJokes from "@/components/liked-jokes/liked-jokes";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Random Dad Jokes | List of favorites",
+};
 
 export default async function Page() {
   return (

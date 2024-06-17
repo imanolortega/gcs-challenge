@@ -3,12 +3,32 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { frontendURL } from "@/utils/common";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const title = "Random Dad Jokes"
+const description = "The funniest random dad jokes. A vast collection of hilarious dad jokes guaranteed to make you laugh."
+
 export const metadata: Metadata = {
-  title: "Random Dad Jokes",
-  description: "Greencode challenge by Imanol",
+  title: title,
+  description:
+  description,
+    openGraph: {
+      title: title,
+      description: description,
+      url: frontendURL,
+      siteName: title,
+      images: [
+        {
+          url: `${frontendURL}/random-dad-jokes.jpg`,
+          width: 1200,
+          height: 780,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
 };
 
 export default function RootLayout({

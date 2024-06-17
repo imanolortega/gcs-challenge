@@ -1,5 +1,10 @@
-import Link from "next/link";
+import { Metadata } from "next";
 import JokeBox from "@/components/joke-box/joke-box";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Random Dad Jokes | Home",
+};
 
 export default async function Home() {
   return (
