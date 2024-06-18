@@ -4,7 +4,8 @@ import Link from "next/link";
 import Icon from "../icons/icon";
 
 export default function LinkBtn({ id }: { id: string }) {
-  const handleCopyToClipboard = async () => {
+  const handleCopyToClipboard = async (event: React.MouseEvent) => {
+    event.preventDefault();
     const textToCopy = `${window.location.origin}/?id=${id}`;
 
     try {
