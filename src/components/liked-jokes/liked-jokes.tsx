@@ -54,7 +54,7 @@ const LikesListContent = () => {
         <ul className="">
           {filteredJokes.map((joke: Joke) => (
             <li className="mb-6 grid grid-cols-[90%_10%] p-2" key={joke.id}>
-              <div className="flex content-center pt-1">
+              <div className="flex content-center pt-0 lg:pt-1">
                 <p>{joke.joke}</p>
               </div>
               <div>
