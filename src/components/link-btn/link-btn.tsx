@@ -18,9 +18,8 @@ export default function LinkBtn({ id }: { id: string }) {
   };
 
   return (
-    <Link
+    <button
       className="btn btn-primary"
-      href={`/?id=${id}`}
       onClick={handleCopyToClipboard}
     >
       <Icon type="copy" />
@@ -34,6 +33,6 @@ export default function LinkBtn({ id }: { id: string }) {
           },
         }}
       />
-    </Link>
+    </button>
   );
 }
